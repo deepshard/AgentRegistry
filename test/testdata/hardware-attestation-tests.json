@@ -1,0 +1,95 @@
+{
+  "deployment": {
+    "merkleRoot": "0xf5a973d438ee12875283b41e1f59fe855ea891b08f909241fdf5cefd0938ab74",
+    "rootKeyAddress": "0x2e988A386a799F506693793c6A5AF6B54dfAaBfB"
+  },
+  "serialCopyingAttack": {
+    "legitimateCase": {
+      "address": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+      "serialNumber": "0x76de94ee02d9182c89bd22254c21d112ffb8170eb04f7e187f6582fa5344b711",
+      "merkleProof": [
+        "0x346557cb1f77b3bf6a4095a6667c0c61cfc9c5aae33439f0e6e30ebd663b5d5c"
+      ],
+      "rootSignature": "0x2df12d02ebfc8daf1a8fb4368c85ae765e0848407d6c11fc1269e283cae1238216d62137e24b7406d6fa8f1a8700db7daeee8e82c89a28ddc106312a30569a6f1c"
+    },
+    "attackerCase": {
+      "address": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+      "serialNumber": "0x76de94ee02d9182c89bd22254c21d112ffb8170eb04f7e187f6582fa5344b711",
+      "merkleProof": [
+        "0x346557cb1f77b3bf6a4095a6667c0c61cfc9c5aae33439f0e6e30ebd663b5d5c"
+      ],
+      "rootSignature": "0x7bae8427ce56d42a9ee49cf027cdc78aadd6e2c57275a2e4a2b69ed9f7cc45877d6a733bd678a32439c033eaea9d27512313d7bcc5c4da3d49ac88eeaf1bd2641b"
+    }
+  },
+  "wrongSigningKeyAttack": {
+    "address": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+    "serialNumber": "0xa9c8d6545aa1889f08641ceaf7c0a8bbeaf8364a7aae5b80840520103a79076c",
+    "merkleProof": [
+      "0x1ddea9a35807ac7e9a6b168165f75472203978100b5e300203d6382f5e8f7639",
+      "0x6f00257972179ef694645987424e1b1db142264a000bb7ce94eaf57b3dfab2db"
+    ],
+    "rootSignature": "0xc7fbff9bf25b11f16f19b3c5d08f8f630bc0b5be892daeddd3be7cba8b2c8f365e89abc7eda829f83ed73930a23d145792dd3bd2983fe3aec7bb608f7032c8481c"
+  },
+  "doubleRegistrationAttack": {
+    "firstRegistration": {
+      "address": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+      "serialNumber": "0xa9c8d6545aa1889f08641ceaf7c0a8bbeaf8364a7aae5b80840520103a79076c",
+      "merkleProof": [
+        "0x1ddea9a35807ac7e9a6b168165f75472203978100b5e300203d6382f5e8f7639",
+        "0x6f00257972179ef694645987424e1b1db142264a000bb7ce94eaf57b3dfab2db"
+      ],
+      "rootSignature": "0x59748618931ffb2103551e5bb63649d2e964bc555b8e3b155dff01bd53007eaa4a322c4d4d5b6579a40cca611329f70aa841d8347c8e1a49338ad458b8a8d0ed1b"
+    },
+    "secondRegistration": {
+      "address": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+      "serialNumber": "0xa9c8d6545aa1889f08641ceaf7c0a8bbeaf8364a7aae5b80840520103a79076c",
+      "merkleProof": [
+        "0x1ddea9a35807ac7e9a6b168165f75472203978100b5e300203d6382f5e8f7639",
+        "0x6f00257972179ef694645987424e1b1db142264a000bb7ce94eaf57b3dfab2db"
+      ],
+      "rootSignature": "0x59748618931ffb2103551e5bb63649d2e964bc555b8e3b155dff01bd53007eaa4a322c4d4d5b6579a40cca611329f70aa841d8347c8e1a49338ad458b8a8d0ed1b"
+    }
+  },
+  "invalidMerklePathAttack": {
+    "address": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+    "serialNumber": "0x76de94ee02d9182c89bd22254c21d112ffb8170eb04f7e187f6582fa5344b711",
+    "merkleProof": [
+      "0x1ddea9a35807ac7e9a6b168165f75472203978100b5e300203d6382f5e8f7639",
+      "0x6f00257972179ef694645987424e1b1db142264a000bb7ce94eaf57b3dfab2db"
+    ],
+    "rootSignature": "0x2df12d02ebfc8daf1a8fb4368c85ae765e0848407d6c11fc1269e283cae1238216d62137e24b7406d6fa8f1a8700db7daeee8e82c89a28ddc106312a30569a6f1c"
+  },
+  "zeroAddressAttack": {
+    "address": "0x0000000000000000000000000000000000000000",
+    "serialNumber": "0x76de94ee02d9182c89bd22254c21d112ffb8170eb04f7e187f6582fa5344b711",
+    "merkleProof": [
+      "0x346557cb1f77b3bf6a4095a6667c0c61cfc9c5aae33439f0e6e30ebd663b5d5c"
+    ],
+    "rootSignature": "0xc6ba8320e685624af4a8105c579de8dc7c645fd4e152ba475ffaa7b18bca0fe459d805668654d365c58f7e67dd10e0309a1c6a02dad632dd0060ef91ecab78461c"
+  },
+  "signatureReplayAttack": {
+    "legitimateCase": {
+      "address": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+      "serialNumber": "0x76de94ee02d9182c89bd22254c21d112ffb8170eb04f7e187f6582fa5344b711",
+      "merkleProof": [
+        "0x346557cb1f77b3bf6a4095a6667c0c61cfc9c5aae33439f0e6e30ebd663b5d5c"
+      ],
+      "rootSignature": "0x2df12d02ebfc8daf1a8fb4368c85ae765e0848407d6c11fc1269e283cae1238216d62137e24b7406d6fa8f1a8700db7daeee8e82c89a28ddc106312a30569a6f1c"
+    },
+    "attackerCase": {
+      "address": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+      "serialNumber": "0xa9c8d6545aa1889f08641ceaf7c0a8bbeaf8364a7aae5b80840520103a79076c",
+      "merkleProof": [
+        "0x1ddea9a35807ac7e9a6b168165f75472203978100b5e300203d6382f5e8f7639",
+        "0x6f00257972179ef694645987424e1b1db142264a000bb7ce94eaf57b3dfab2db"
+      ],
+      "rootSignature": "0x2df12d02ebfc8daf1a8fb4368c85ae765e0848407d6c11fc1269e283cae1238216d62137e24b7406d6fa8f1a8700db7daeee8e82c89a28ddc106312a30569a6f1c"
+    }
+  },
+  "emptyProofAttack": {
+    "address": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+    "serialNumber": "0x76de94ee02d9182c89bd22254c21d112ffb8170eb04f7e187f6582fa5344b711",
+    "merkleProof": [],
+    "rootSignature": "0x2df12d02ebfc8daf1a8fb4368c85ae765e0848407d6c11fc1269e283cae1238216d62137e24b7406d6fa8f1a8700db7daeee8e82c89a28ddc106312a30569a6f1c"
+  }
+}
